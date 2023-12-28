@@ -1,0 +1,239 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*::after, *::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+    background-color: azure;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* layout Styles */
+
+.layout{
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "content content content lateral"
+    "footer footer footer footer";
+    ;
+    grid-template-rows: 100px 70px auto 70px;
+}
+/* Header Styles */
+.header{
+    grid-area: header;
+    background-color: azure;
+    text-align: left;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+header h1{
+    font-size: 40px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.logo{
+    background:linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.play{
+    width: 0;
+    height: 0;
+    margin-top: 14px;
+    margin-left: 18px;
+    border-left: 16px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+/* Nav Styles */
+.nav{
+    grid-area: nav;
+}
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.nav ul li a{
+    margin: 0px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5f7ee6;
+}
+.nav ul li a:hover{
+    transition: 0.5s;
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+
+/* Content Styles */
+.content{
+    margin-top: 20px;
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+/* card Styles */
+.movie-item{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 60, 255);
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.movie-item img{
+    object-fit: cover;
+}
+.movie-item .title{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+}
+.movie-item .description{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+}
+.movie-item .btn-edit{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.movie-item .btn-edit:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.movie-item .btn-del{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 0, 0);
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.movie-item .btn-del:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* Lateral Styles */
+.lateral{
+    grid-area: lateral;
+    color : white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 25px;
+    margin-right: 20px;
+    background-color: #8577ff; 
+    border-radius: 10px;
+    border: 3px solid #000000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 50%;
+}
+.lateral input[type="text"]{
+    width: 80%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 2px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+}
+.lateral input[type="file"]{
+    color: white;
+    font-size: 15px;
+}
+.lateral textarea{
+    height: 100px;
+    width: 90% ;
+    margin: 10px;
+    border-radius: 2px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+}
+.lateral button{
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(236, 236, 236);
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.lateral button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+/* Footer Styles */
+.footer{
+    grid-area: footer;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+}
